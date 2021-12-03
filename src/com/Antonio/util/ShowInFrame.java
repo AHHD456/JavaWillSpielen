@@ -6,15 +6,15 @@ import javax.swing.JFrame;
 import com.Antonio.JavaWillSpielen.PaintablePanel;
 
 public class ShowInFrame {
-	public static void show (String title, PaintablePanel paintablePanel) {
+	public static void show (String title, JComponent c) {
 		JFrame f = new JFrame(title);
-		f.add(paintablePanel);
+		f.add(c);
 		f.pack();
 		f.setVisible(true);
 		
 	}
 	
 	public static void show (JComponent c) {
-		show("", (PaintablePanel) c);
+		show("",  c);
 	}
 }

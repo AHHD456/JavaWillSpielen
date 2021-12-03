@@ -1,17 +1,22 @@
-import com.Antonio.util.ShowInFrame;
-import com.Antonio.JavaWillSpielen.SizedPanel;
-import com.Antonio.JavaWillSpielen.Paintable;
-import com.Antonio.JavaWillSpielen.PaintableOval;
-import com.Antonio.JavaWillSpielen.SizedPanel;
+package com.Antonio.JavaWillSpielen;
+
 
 import java.util.List;
+
+import com.Antonio.util.ShowInFrame;
+
 import java.util.ArrayList;
 
-public class PaintablePanel {
+public class PaintablePanels extends SizedPanel{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	List<Paintable> pas;
 	
-	public PaintablePanel(List<Paintable> pas)
+	public PaintablePanels(List<Paintable> pas)
 	{
 		this.pas =pas;
 	}
@@ -32,7 +37,7 @@ public class PaintablePanel {
 		ps.add(new PaintableOval(100,50,30,50, null));
 		ps.add(new PaintableOval(100,50,130,150, null));
 		
-		ShowInFrame.show("Ovale", new PaintablePanel(ps));
+		ShowInFrame.show("Ovale", new PaintablePanels(ps));
 		
 	}
 	
