@@ -1,19 +1,61 @@
 package com.Antonio.JavaWillSpielen;
 
- import javax.swing.*;
- import com.Antonio.util.*;
- 
-public class Counter extends SimpleButton{
+import javax.swing.*;
 
+import com.Antonio.util.ShowInFrame;
 
-	private static final long serialVersionUID = 1L;
+import java.awt.event.*;
 
+public class Counter extends SimpleButton {
+static int i = 0;
 	public Counter() {
- b.addActionListener(new CounterButtonListener(l));
+		b1.addActionListener(
+
+				new ActionListener() {
+					
+					public void actionPerformed(ActionEvent e) {
+						i++;
+						l.setText("" + i);
+						
+					}
+				}
+
+		);
+		
+		b2.addActionListener(
+
+				new ActionListener() {
+					
+
+					public void actionPerformed(ActionEvent e) {
+						i--;
+						l.setText("" + i);
+						
+					}
+				}
+
+		);
+		
+		b3.addActionListener(
+
+				new ActionListener() {
+					
+
+					public void actionPerformed(ActionEvent e) {
+						i=0;
+						l.setText("" + i);
+						
+					}
+				}
+
+		);
+		
+	}
+	
+
+	public static void main(String[] args) {
+		ShowInFrame.show(new Counter());
+
 	}
 
-
-
-public static void main(String [] args) {
- ShowInFrame.show(new Counter());}
- }
+}

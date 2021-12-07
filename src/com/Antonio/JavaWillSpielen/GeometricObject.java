@@ -38,6 +38,9 @@ public class GeometricObject {
 		}
 	}
 
+	
+
+	
 	public GeometricObject(double width, double height) {
 		this(width, height, new Vertex(0, 0), Color.red);
 	}
@@ -51,7 +54,7 @@ public class GeometricObject {
 	}
 	
 	public GeometricObject(Vertex pos) {
-		this(0,0,pos, Color.red);
+		this(0,0,pos, new Color(0,0,0));
 	}
 
 	public String toString() {
