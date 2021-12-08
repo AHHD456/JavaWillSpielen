@@ -1,45 +1,27 @@
 package com.Antonio.JavaWillSpielen;
 
+import javax.swing.*;
+
+import com.Antonio.util.*;
+
 import java.awt.Dimension;
-import java.awt.Toolkit;
-import javax.swing.JPanel;
+public class SizedPanel extends JPanel{
 
-import com.Antonio.util.ShowInFrame;
-
-public class SizedPanel extends JPanel {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	
-	int preferredWidth = 400;
-	int preferredHeight = 300;
-	
-//	int preferredWidth = screenSize.width;
-//	int preferredHeight = screenSize.height;
+	int preferredWidth=1024;
+	int preferredHeight=768;
 	
 	public SizedPanel(int w, int h) {
-		preferredWidth = w;
-		preferredHeight = h;
+		preferredWidth=w;
+		preferredHeight=h;
 	}
+	public SizedPanel() {}
 	
-	
-
-	public SizedPanel() {
-	}
-
 	@Override public Dimension getPreferredSize() {
-		return new Dimension(preferredWidth, preferredHeight);
-	}
+		return new Dimension(preferredWidth,preferredHeight);}
 	
-	public void paintComponent(java.awt.Graphics g) {
-		g.fillRect(30, 50, 45, 80);
-	}
 	
-	public static void main (String [] args) {
-		ShowInFrame.show("Hello there", new SizedPanel());
-		
-	}
+ public static void main(String[] args) {
+	 ShowInFrame.show(new SizedPanel());
+
+}
 }
